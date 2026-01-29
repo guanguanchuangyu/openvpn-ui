@@ -12,7 +12,7 @@ cipher {{ .Cipher }}
 auth {{ .Auth }}
 {{ .AuthNoCache }}
 {{ .TlsClient }}
-{{ .RedirectGateway }}
+# redirect-gateway def1  # 已禁用，默认不走全局 VPN
 verb {{ .Verbose }}
 {{ .AuthUserPass }}
 {{ .CustomConfOne }}
