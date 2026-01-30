@@ -3,6 +3,7 @@ dev {{ .Device }}
 proto {{ .Proto }}
 remote {{ .ServerAddress }} {{ .OpenVpnServerPort }} {{ .Proto }}
 {{ .ResolveRetry }}
+nobind
 user {{ .OVClientUser }}
 group {{ .OVClientGroup }}
 {{ .PersistTun }}
@@ -12,7 +13,6 @@ cipher {{ .Cipher }}
 auth {{ .Auth }}
 {{ .AuthNoCache }}
 {{ .TlsClient }}
-# redirect-gateway def1  # 已禁用，默认不走全局 VPN
 verb {{ .Verbose }}
 {{ .AuthUserPass }}
 {{ .CustomConfOne }}
